@@ -1,9 +1,12 @@
 ---
-aliases: 
+aliases:
+  - NameNode
+  - SecondaryNameNode
 title: NameNode和SecondaryNameNode
 date created: 三月 19日 2024, 10:39:47 上午
-date modified: 三月 19日 2024, 11:02:37 上午
-tags: [code/big-data]
+date modified: 三月 19日 2024, 1:51:09 下午
+tags:
+  - code/big-data
 ---
 ### NN 和 2NN 工作机制 
 #### NameNode 中的元数据存储在哪？
