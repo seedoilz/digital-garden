@@ -1,0 +1,120 @@
+---
+aliases: 
+title: FreeMarker
+date created: 二月 25日 2024, 11:12:04 上午
+date modified: 三月 5日 2024, 4:03:56 下午
+tags: [code/tools, language/java]
+---
+
+### 概念
+FreeMarker是一种模版引擎（一种用于生成动态内容），优点是入门简单、灵活易拓展。
+主要目标就是在模版的基础上接收一个Java对象，随后将对象中的成员变量中的值渲染到模版上，输出最后的内容。
+
+![CleanShot 2024-02-25 at 10.50.54@2x.png](https://typora-tes.oss-cn-shanghai.aliyuncs.com/picgo/CleanShot%202024-02-25%20at%2010.50.54%402x.png)
+
+### 模版
+FreeMarker拥有自己的模板编写规则，一般用FTL表示FreeMarker模板语言，比如 myweb.hmtl.ftl 就是一个 FreeMaker的模板文件。
+
+模板文件由4个核心部分组成:
+1. 文本:固定的内容，会按原样输出。
+2. 插值:用 ${...} 语法来占位，尖括号内的内容给在经过计算和替换后，才会输出。
+3. FTL指令:有点像HTML的标签语法，通过<#xxx ...>来实现各种特殊功能。比如 `<#list elements as element>` 实现循环输出。
+4. 注释:和HTML注释类似，使用 语法，注释中的内容不会输出。 下面我们给出一个myweb.html.ftl的代码示例
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>徐半仙模板库</title> </head>
+<body> <h1>欢迎使用徐半仙的模板库</h1> <ul>
+    <#list menuItems as item>
+        <li><a href="item.html">${item.label}</a></li>
+    </#list>
+</ul>
+</body>
+<footer>
+${currentYear} 徐半仙. All rights reserved. </footer>
+</html>
+```
+
+### 数据模型
+我们把喂给模板准备的所有数据整体统称为数据模型。
+在FreeMarker中，数据模型一般是树形结构，可以是复杂的Java对象，也可以是HashMap等更通用的结构。比如为 上述模板准备的数据模型，结构可能(也可以使用功能HashMap，哈希map更通用更灵活)如下所示
+```json
+{
+  "currentYear": 2023,
+  "menuItems": [
+		{
+			"url": "https://blog.csdn.net/qq_45952745",
+			"label": "个人CSDN博客"，
+		}, 
+		{
+		    "url": "https://github.com/xubanxian1234",
+		    "label": "个人GitHub仓库地址"， 
+		}
+	] 
+}
+```
+
+### Demo
+#### 引入依赖
+```xml
+<dependency>
+  <groupId>org.freemarker</groupId>
+  <artifactId>freemarker</artifactId>
+  <version>2.3.32</version>
+</dependency>
+```
+
+#### 创建配置对象
+创建单元测试类 FreeMarkerTest ，在Test方法中创建一个FreeMaker的全局配置对象，可以统一制定模板文件所在的路径、模板文件的字符集等。
+```java
+public class FreeMarkerTest {
+/**
+* 测试FreeMarker的代码生成以及代码输出 */
+@Test
+public void test() throws IOException {
+	// 新创建出Configuration对象，参数为 FreeMarker 版本号
+	Configuration configuration = new Configuration(Configuration.VERSION_2_3_32);
+	// 制定模板文件所在的路径,全局指定freemarker的生成规则，如果有多个模板文件路径则生成多个 configuration即可
+    configuration.setDirectoryForTemplateLoading(new File("src/main/resources/templates"));
+// 设置模板文件使用的字符集
+    configuration.setEncoding(new Locale("zh_CN"), "utf-8");
+  }
+}
+```
+
+#### 创建数据模型
+```java
+// 数据模型
+Map<String, Object> dataModel = new HashMap<>(); 
+dataModel.put("currentYear", 2023);
+List<Map<String, Object>> menuItems = new ArrayList<>(); 
+Map<String, Object> menuItem1 = new HashMap<>(); 
+menuItem1.put("url", "https://blog.csdn.net/qq_45952745"); 
+menuItem1.put("label", "CSDN个人博客");
+Map<String, Object> menuItem2 = new HashMap<>(); 
+menuItem2.put("url", "https://github.com/xubanxian1234"); 
+menuItem2.put("label", "个人GitHub仓库地址"); 
+menuItems.add(menuItem1);
+menuItems.add(menuItem2);
+// 这里的键一定要与模版内对应
+dataModel.put("items", menuItems);
+```
+
+#### 生成文件并释放资源
+```java
+// 指定生成文件(在xuzi-generator-basic目录下) 
+FileWriter out = new FileWriter("myweb.html");
+// 生成文件,并释放流 
+template.process(dataModel, out); 
+out.close();
+```
+
+### 常用语法
+1. 插值
+2. 分支和判空
+3. 默认值
+4. 循环
+5. 宏定义
+6. 内建函数
