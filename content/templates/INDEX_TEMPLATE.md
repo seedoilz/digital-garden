@@ -2,7 +2,7 @@
 const dv = app.plugins.plugins["dataview"].api;
 const filename = "index";
 const query1 = `LIST FROM #project`;
-const query2 = `TABLE WITHOUT ID replace(string(file.link), "|" + file.name, "") AS "File", tags AS "tags" 
+const query2 = `TABLE WITHOUT ID replace(string(file.link), "|" + file.name, "") AS "File", file.frontmatter["date modified"] AS "Last Edited Time", tags AS "tags" 
 WHERE file.name != "index" AND file.name != "INDEX_TEMPLATE"
 SORT file.mtime DESC LIMIT 10`;
 console. log
