@@ -14,16 +14,17 @@ const defaultOptions: Options = {
 
 function coerceDate(fp: string, d: any): Date {
   const dt = new Date(d)
-  const invalidDate = isNaN(dt.getTime()) || dt.getTime() === 0
-  if (invalidDate && d !== undefined) {
-    console.log(
-      chalk.yellow(
-        `\nWarning: found invalid date "${d}" in \`${fp}\`. Supported formats: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format`,
-      ),
-    )
-  }
-
-  return invalidDate ? new Date() : dt
+  // const invalidDate = isNaN(dt.getTime()) || dt.getTime() === 0
+  // if (invalidDate && d !== undefined) {
+  //   console.log(
+  //     chalk.yellow(
+  //       `\nWarning: found invalid date "${d}" in \`${fp}\`. Supported formats: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format`,
+  //     ),
+  //   )
+  // }
+  //
+  // return invalidDate ? new Date() : dt
+  return dt
 }
 
 type MaybeDate = undefined | string | number
