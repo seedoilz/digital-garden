@@ -2,10 +2,8 @@
 aliases: 
 title: Hadoop组成
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-20 11:03:17
-tags:
-  - code/big-data
-  - "#input"
+date modified: 2024-03-20 12:03:26
+tags: [code/big-data, input]
 ---
 ## 组成
 ### Hadoop1.x

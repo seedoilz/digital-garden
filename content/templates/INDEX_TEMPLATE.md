@@ -15,7 +15,7 @@ aliases:
 title: index
 date created: ${createdTime}
 date modified: ${modifiedDate}
-tags: [project, catalogue]
+tags: [project, catalogue, input]
 ---\n`;
 const tFile = tp.file.find_tfile(filename);
 const queryOutput1 = await dv.queryMarkdown(query1);
