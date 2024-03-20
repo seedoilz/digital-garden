@@ -2,9 +2,10 @@
 const dv = app.plugins.plugins["dataview"].api;
 const filename = "index";
 const query1 = `LIST FROM #project`;
-const query2 = `TABLE WITHOUT ID file.link AS "File", file.mtime AS "Last Modified", tags AS "tags" 
+const query2 = `TABLE WITHOUT ID replace(string(file.link), "|" + file.name, "") AS "File", file.mtime AS "Last Modified", tags AS "tags" 
 WHERE file.name != "index" AND file.name != "INDEX_TEMPLATE"
 SORT file.mtime DESC LIMIT 10`;
+console. log
 
 let createdTime = "三月 20日 2024, 10:26:03 上午"
 let modifiedDate = moment().format("MMMM Do YYYY, h:mm:ss a");
