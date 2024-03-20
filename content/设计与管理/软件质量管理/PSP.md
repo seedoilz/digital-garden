@@ -2,8 +2,8 @@
 aliases:
   - 个体软件过程
 title: PSP
-date created: 十二月 24日 2023, 7:20:02 晚上
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-12-24 19:12:00
+date modified: 2024-03-20 11:03:70
 tags: [management]
 ---
 

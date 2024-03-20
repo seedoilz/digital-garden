@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: HDFS文件块
-date created: 三月 18日 2024, 1:40:54 下午
-date modified: 三月 18日 2024, 1:44:48 下午
+date created: 2024-03-18 13:03:00
+date modified: 2024-03-20 11:03:18
 tags: [code/big-data]
 ---
 > [[HDFS]] 中的文件在物理上是分块存储 (Block)，块的大小可以通过配置参数(dfs.blocksize)来规定，默认大小在Hadoop2.x/3.x版本中是128M，1.x版本中是64M。

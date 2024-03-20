@@ -1,7 +1,7 @@
 ---
 aliases: [发布-订阅模式]
-date created: 四月 26日 2023, 4:53:16 下午
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-04-26 16:04:00
+date modified: 2024-03-20 11:03:92
 title: Publish-Subscribe Pattern
 tags: [system-architecture/pattern]
 ---

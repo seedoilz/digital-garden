@@ -1,7 +1,7 @@
 ---
 aliases: 
-date created: 五月 23日 2023, 10:24:13 晚上
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-05-23 22:05:00
+date modified: 2024-03-20 11:03:14
 title: Uncertainty - Lecture 2
 tags: [input]
 ---

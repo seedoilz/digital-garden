@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: Iterators
-date created: 八月 14日 2023, 3:51:23 下午
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-08-14 15:08:00
+date modified: 2024-03-20 11:03:10
 tags: [language/python, input]
 ---
 

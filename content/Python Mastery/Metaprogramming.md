@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: Metaprogramming
-date created: 八月 8日 2023, 6:27:52 晚上
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-08-08 18:08:00
+date modified: 2024-03-20 11:03:09
 tags: [language/python, input]
 ---
   

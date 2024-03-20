@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: Hadoop配置
-date created: 三月 17日 2024, 7:09:19 晚上
-date modified: 三月 18日 2024, 10:46:13 上午
+date created: 2024-03-17 19:03:00
+date modified: 2024-03-20 11:03:17
 tags: [code/big-data]
 ---
 ## 常用命令

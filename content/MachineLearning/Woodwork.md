@@ -1,7 +1,7 @@
 ---
 aliases: 
-date created: 四月 15日 2023, 9:49:21 上午
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-04-15 09:04:00
+date modified: 2024-03-20 11:03:13
 title: Woodwork Dataframe
 tags: [code/machine-learning]
 ---

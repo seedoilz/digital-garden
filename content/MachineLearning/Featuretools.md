@@ -1,7 +1,7 @@
 ---
 aliases: [featuretools]
-date created: 四月 14日 2023, 4:00:42 下午
-date modified: 三月 5日 2024, 4:04:10 下午
+date created: 2023-04-14 16:04:00
+date modified: 2024-03-20 11:03:13
 title: Deep Feature Synthesis
 tags: [code/machine-learning, code/tools, language/python]
 ---

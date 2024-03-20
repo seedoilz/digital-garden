@@ -2,8 +2,8 @@
 aliases:
   - 能力成熟度集成模型
 title: CMMI
-date created: 十二月 24日 2023, 4:27:31 下午
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-12-24 16:12:00
+date modified: 2024-03-20 11:03:71
 tags: [management]
 ---
 

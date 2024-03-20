@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: HDFS读写流程
-date created: 三月 18日 2024, 5:26:38 下午
-date modified: 三月 19日 2024, 10:32:34 上午
+date created: 2024-03-18 17:03:00
+date modified: 2024-03-20 11:03:17
 tags: [code/big-data]
 ---
 ### 文件写入

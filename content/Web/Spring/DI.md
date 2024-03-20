@@ -2,8 +2,8 @@
 aliases:
   - Dependecy Injection
 title: DI
-date created: 三月 5日 2024, 4:30:40 下午
-date modified: 三月 5日 2024, 8:51:07 晚上
+date created: 2024-03-05 16:03:00
+date modified: 2024-03-20 11:03:09
 tags:
   - code/web
 ---

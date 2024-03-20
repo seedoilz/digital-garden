@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: Functions
-date created: 八月 4日 2023, 10:14:42 上午
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-08-04 10:08:00
+date modified: 2024-03-20 11:03:11
 tags: [language/python, input]
 ---
 

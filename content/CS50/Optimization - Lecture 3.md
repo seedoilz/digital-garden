@@ -1,7 +1,7 @@
 ---
 aliases: 
-date created: 六月 21日 2023, 9:36:11 晚上
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-06-21 21:06:00
+date modified: 2024-03-20 11:03:14
 title: Optimization - Lecture 3
 tags: [input]
 ---

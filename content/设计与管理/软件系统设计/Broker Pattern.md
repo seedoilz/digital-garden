@@ -1,7 +1,7 @@
 ---
 aliases: [代理模式, Broker]
-date created: 四月 26日 2023, 4:48:19 下午
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-04-26 16:04:00
+date modified: 2024-03-20 11:03:97
 title: Broker Pattern
 tags: [system-architecture/pattern]
 ---

@@ -1,7 +1,7 @@
 ---
 aliases: []
-date created: 四月 14日 2023, 4:10:18 下午
-date modified: 三月 18日 2024, 5:09:15 下午
+date created: 2023-04-14 16:04:00
+date modified: 2024-03-20 11:03:14
 title: Deep Feature Synthesis
 tags:
   - hung

@@ -1,7 +1,7 @@
 ---
 aliases: 
-date created: 四月 17日 2023, 5:32:26 下午
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-04-17 17:04:00
+date modified: 2024-03-20 11:03:88
 title: 1. 外观模式
 tags: [input]
 ---

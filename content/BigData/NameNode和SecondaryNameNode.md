@@ -3,8 +3,8 @@ aliases:
   - NameNode
   - SecondaryNameNode
 title: NameNode和SecondaryNameNode
-date created: 三月 19日 2024, 10:39:47 上午
-date modified: 三月 19日 2024, 1:51:09 下午
+date created: 2024-03-19 10:03:00
+date modified: 2024-03-20 11:03:16
 tags:
   - code/big-data
 ---

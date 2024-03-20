@@ -1,7 +1,7 @@
 ---
 aliases: [xgb]
-date created: 四月 18日 2023, 5:08:41 下午
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-04-18 17:04:00
+date modified: 2024-03-20 11:03:13
 title: XGBoost
 tags: [code/machine-learning]
 ---

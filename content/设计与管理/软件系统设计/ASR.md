@@ -1,7 +1,7 @@
 ---
 aliases: [Architecturally Significant Requirements, 架构攸关的需求]
-date created: 四月 24日 2023, 9:00:16 晚上
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-04-24 21:04:00
+date modified: 2024-03-20 11:03:97
 title: ASR
 tags: [system-architecture/theory]
 ---

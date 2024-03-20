@@ -2,8 +2,8 @@
 aliases:
   - Inversion of Control
 title: IoC
-date created: 三月 5日 2024, 4:19:23 下午
-date modified: 三月 10日 2024, 6:53:15 晚上
+date created: 2024-03-05 16:03:00
+date modified: 2024-03-20 11:03:09
 tags: [code/web]
 ---
 ## 概述

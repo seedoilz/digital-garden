@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: HDFS架构概述
-date created: 三月 18日 2024, 1:40:09 下午
-date modified: 三月 18日 2024, 1:40:47 下午
+date created: 2024-03-18 13:03:00
+date modified: 2024-03-20 11:03:18
 tags: [code/big-data]
 ---
 >Hadoop Distributed File System，简称 HDFS，是一个分布式文件系统。

@@ -1,7 +1,7 @@
 ---
 aliases: 
-date created: 五月 19日 2023, 4:19:02 下午
-date modified: 三月 5日 2024, 4:07:12 下午
+date created: 2023-05-19 16:05:00
+date modified: 2024-03-20 11:03:15
 title: Knowledge - Lecture 1
 tags: [input]
 ---

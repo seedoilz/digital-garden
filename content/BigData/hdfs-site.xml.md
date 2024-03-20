@@ -1,8 +1,8 @@
 ---
 aliases: 
 title: hdfs-site.xml
-date created: 三月 17日 2024, 7:16:29 晚上
-date modified: 三月 17日 2024, 7:17:13 晚上
+date created: 2024-03-17 19:03:00
+date modified: 2024-03-20 11:03:15
 tags: [code/big-data, code/snippet]
 ---
 ```XML

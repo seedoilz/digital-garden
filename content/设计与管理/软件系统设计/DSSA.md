@@ -1,7 +1,7 @@
 ---
 aliases: [Domain-specific software architecture]
-date created: 四月 28日 2023, 9:44:18 晚上
-date modified: 三月 5日 2024, 4:07:11 下午
+date created: 2023-04-28 21:04:00
+date modified: 2024-03-20 11:03:94
 title: DSSA
 tags: [system-architecture/theory]
 ---

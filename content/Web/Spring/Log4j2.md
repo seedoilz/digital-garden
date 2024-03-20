@@ -2,8 +2,8 @@
 aliases:
   - Apache Log4j2
 title: Log4j2
-date created: 三月 5日 2024, 4:00:59 下午
-date modified: 三月 5日 2024, 4:17:59 下午
+date created: 2024-03-05 16:03:00
+date modified: 2024-03-20 11:03:08
 tags:
   - code/tools
   - language/java
