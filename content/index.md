@@ -2,7 +2,7 @@
 aliases: 
 title: index
 date created: 2024-03-19 21:03:00
-date modified: 2024-03-20 12:03:97
+date modified: 2024-03-20 13:03:61
 tags: [project, catalogue, input]
 ---
 ## Projects
