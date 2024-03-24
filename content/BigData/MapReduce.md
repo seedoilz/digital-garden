@@ -2,10 +2,10 @@
 aliases: 
 title: MapReduce
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-24 09:03:04
+date modified: 2024-03-24 10:03:16
 tags:
   - code/big-data
-  - "#input"
+  - input
 ---
 ## MapReduce概述
 ### 过程
@@ -22,5 +22,5 @@ MapReduce 将计算过程分为两个阶段：Map和Reduce
 2. MapTask：负责 Map 阶段的整个数据处理流程。
 3. ReduceTask：负责 Reduce 阶段的整个数据处理流程。
 
-## [[MapReduce框架原理]]
+![[MapReduce框架原理]]
 
