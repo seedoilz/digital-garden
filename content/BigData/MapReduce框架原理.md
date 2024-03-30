@@ -2,7 +2,7 @@
 aliases: 
 title: MapReduce框架原理
 date created: 2024-03-24 09:03:00
-date modified: 2024-03-30 13:03:87
+date modified: 2024-03-30 21:03:53
 tags: [code/big-data]
 ---
 ## InputFormat 数据输入
@@ -113,6 +113,14 @@ job.setNumReduceTasks(5);
 #### 自定义OutputFormat步骤
 1. 自定义一个类继承FileOutputFormat。
 2. 改写RecordWriter，具体改写输出数据的方法write()。
-
-
+3. 在自己所写的继承FileOutputFormat的类中新建RecordWriter并返回
+```java
+@Override
+public RecordWriter<Text, NullWritable> getRecordWriter(TaskAttemptContext job) throws IOException,
+InterruptedException {
+	//创建一个自定义的 RecordWriter返回
+	LogRecordWriter logRecordWriter = new LogRecordWriter(job);
+	return logRecordWriter;
+}
+```
 

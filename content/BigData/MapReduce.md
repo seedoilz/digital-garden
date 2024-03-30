@@ -2,7 +2,7 @@
 aliases: 
 title: MapReduce
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-30 14:03:01
+date modified: 2024-03-30 21:03:55
 tags:
   - code/big-data
   - input
@@ -39,3 +39,27 @@ MapReduce 将计算过程分为两个阶段：Map和Reduce
 1. Copy 阶段：ReduceTask 从各个 MapTask 上远程拷贝一片数据，并针对某一片数据，如果其大小超过一定阈值，则写到磁盘上，否则直接放到内存中。
 2. Sort 阶段：在远程拷贝数据的同时，ReduceTask 启动了两个后台线程对内存和磁盘上的文件进行合并，以防止内存使用过多或磁盘上文件过多。按照 MapReduce 语义，用户编写 reduce()函数输入数据是按 key 进行聚集的一组数据。为了将 key 相同的数据聚在一起，Hadoop 采用了基于排序的策略。由于各个MapTask 已经实现对自己的处理结果进行了局部排序，因此，ReduceTask 只需对所有数据进行一次归并排序即可。
 3. Reduce 阶段：reduce()函数将计算结果写到HDFS 上。
+
+## Join应用
+### Reduce Join
+#### 主要方法
+1. Map 端的主要工作：为来自不同表或文件的 key/value 对，**打标签以区别不同来源的记录**。然后用连接字段作为key，其余部分和新加的标志作为value，最后进行输出。
+2. Reduce 端的主要工作：在Reduce 端**以连接字段作为key 的分组已经完成**，我们只需要在每一个分组当中将那些来源于不同文件的记录（在 Map 阶段已经打标志）分开，最后进行合并就ok 了。
+#### 缺点
+这种方式中，合并的操作是在Reduce 阶段完成， Reduce 端的处理压力太大， Map节点的运算负载则很低，资源利用率不高，且在Reduce 阶段极易产生数据倾斜。
+
+### Map Join
+#### 使用场景
+Map Join 适用于*一张表十分小、一张表很大*的场景。
+#### 优点
+在 Map 端缓存多张表，提前处理业务逻辑，这样增加 Map 端业务，减少 Reduce 端数据的压力，尽可能的减少数据倾斜。
+#### 具体方法
+>采用 *DistributedCache*
+1. Mapper 的setup 阶段，将文件读取到缓存集合中。
+2. 在Driver 驱动类中加载缓存。
+```java
+//缓存普通文件到 Task运行节点。
+job.addCacheFile(new URI("file:///e:/cache/pd.txt"));
+//如果是集群运行,需要设置 HDFS路径
+job.addCacheFile(new URI("hdfs://hadoop102:8020/cache/pd.txt"));
+```
