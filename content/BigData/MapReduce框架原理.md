@@ -2,7 +2,7 @@
 aliases: 
 title: MapReduce框架原理
 date created: 2024-03-24 09:03:00
-date modified: 2024-03-30 21:03:53
+date modified: 2024-03-30 22:03:95
 tags: [code/big-data]
 ---
 ## InputFormat 数据输入
@@ -17,7 +17,7 @@ tags: [code/big-data]
 
 #### 面试重点
 1. 切片时不考虑数据集整体，而是逐个对于每一个**文件** *单独*切片。
-2. 切片大小可以调整，因为 `切片大小=max(blockSize, min(minSize, maxSize))`。
+2. 切片大小可以调整，因为 `切片大小=max(minSize, min(blockSize, maxSize))`。
 3. **切片大小**可能会超过*设置的切片大小*，设置了1.1倍（32.1MB切一片，避免产生小文件）
 
 #### 源码解析

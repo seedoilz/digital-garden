@@ -2,7 +2,7 @@
 aliases: 
 title: Hadoop
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-24 09:03:70
+date modified: 2024-03-31 15:03:20
 tags: [project]
 ---
 [[Hadoop组成]]
@@ -14,3 +14,5 @@ tags: [project]
 [[MapReduce]]
 
 [[Hadoop序列化]]
+
+[[Hadoop数据压缩]]
