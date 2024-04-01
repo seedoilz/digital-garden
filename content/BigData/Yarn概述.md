@@ -1,11 +1,10 @@
 ---
 aliases: 
-title: Yarn
-date created: 2024-03-12 13:03:00
-date modified: 2024-04-01 19:04:40
+title: Yarn概述
+date created: 2024-03-31 20:03:00
+date modified: 2024-04-01 17:04:70
 tags: [code/big-data]
 ---
-## [[Yarn概述]]
 ### 组成
 1. ResourceManager（RM）：整个集群资源（内存、CPU等）的老大
 2. NodeManager（NM）：单个节点服务器资源老大
@@ -33,4 +32,4 @@ tags: [code/big-data]
 > 14. ReduceTask 向MapTask 获取相应分区的数据。
 > 15. 程序运行完毕后，MR 会向 ResourceManager 申请注销自己。
 
-### 
+
