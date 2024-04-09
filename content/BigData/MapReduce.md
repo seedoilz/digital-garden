@@ -2,7 +2,7 @@
 aliases: 
 title: MapReduce
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-30 21:03:55
+date modified: 2024-04-09 15:04:24
 tags:
   - code/big-data
   - input
@@ -61,5 +61,5 @@ Map Join 适用于*一张表十分小、一张表很大*的场景。
 //缓存普通文件到 Task运行节点。
 job.addCacheFile(new URI("file:///e:/cache/pd.txt"));
 //如果是集群运行,需要设置 HDFS路径
-job.addCacheFile(new URI("hdfs://hadoop102:8020/cache/pd.txt"));
+job.addCacheFile(new URI("hdfs://hadoop1:8020/cache/pd.txt"));
 ```

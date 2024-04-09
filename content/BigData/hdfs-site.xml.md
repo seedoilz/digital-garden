@@ -2,7 +2,7 @@
 aliases: 
 title: hdfs-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-03-20 11:03:15
+date modified: 2024-04-09 15:04:27
 tags: [code/big-data, code/snippet]
 ---
 ```XML
@@ -12,12 +12,12 @@ tags: [code/big-data, code/snippet]
   <!-- nn web端访问地址-->
   <property>
     <name>dfs.namenode.http-address</name>
-    <value>hadoop102:9870</value>
+    <value>hadoop1:9870</value>
   </property>
   <!-- 2nn web端访问地址-->
   <property>
     <name>dfs.namenode.secondary.http-address</name>
-    <value>hadoop104:9868</value>
+    <value>hadoop103:9868</value>
   </property>
 </configuration>
 ```

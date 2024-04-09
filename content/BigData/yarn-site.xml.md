@@ -2,7 +2,7 @@
 aliases: 
 title: yarn-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-03-20 11:03:15
+date modified: 2024-04-09 15:04:00
 tags: [code/big-data, code/snippet]
 ---
 ```XML
@@ -17,7 +17,7 @@ tags: [code/big-data, code/snippet]
   <!-- 指定ResourceManager的地址-->
   <property>
     <name>yarn.resourcemanager.hostname</name>
-    <value>hadoop103</value>
+    <value>hadoop2</value>
   </property>
   <!-- 开启日志聚集功能 -->
   <property>
@@ -27,7 +27,7 @@ tags: [code/big-data, code/snippet]
   <!-- 设置日志聚集服务器地址 -->
   <property>
     <name>yarn.log.server.url</name>
-    <value>http://hadoop102:19888/jobhistory/logs</value>
+    <value>http://hadoop1:19888/jobhistory/logs</value>
   </property>
   <!-- 设置日志保留时间为 7天 -->
   <property>

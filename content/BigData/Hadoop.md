@@ -2,12 +2,13 @@
 aliases: 
 title: Hadoop
 date created: 2024-03-12 13:03:00
-date modified: 2024-04-04 10:04:56
+date modified: 2024-04-09 15:04:71
 tags: [project, code/big-data]
 ---
-[[Hadoop组成]]
+[[Hadoop集群搭建]]
+[[Hadoop配置|一些补充内容]]
 
-[[Hadoop配置]]
+[[Hadoop组成]]
 
 [[HDFS]]
 

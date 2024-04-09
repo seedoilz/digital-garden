@@ -2,7 +2,7 @@
 aliases: 
 title: mapred-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-03-20 11:03:15
+date modified: 2024-04-09 15:04:06
 tags: [code/big-data, code/snippet]
 ---
 ```XML
@@ -18,12 +18,12 @@ tags: [code/big-data, code/snippet]
   <!-- 历史服务器端地址 -->
   <property>
     <name>mapreduce.jobhistory.address</name>
-    <value>hadoop102:10020</value>
+    <value>hadoop1:10020</value>
   </property>
   <!-- 历史服务器 web端地址 -->
   <property>
     <name>mapreduce.jobhistory.webapp.address</name>
-    <value>hadoop102:19888</value>
+    <value>hadoop1:19888</value>
   </property>
   <property>
     <name>yarn.app.mapreduce.am.env</name>

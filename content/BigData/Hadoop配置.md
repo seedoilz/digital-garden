@@ -2,7 +2,7 @@
 aliases: 
 title: Hadoop配置
 date created: 2024-03-17 19:03:00
-date modified: 2024-03-20 11:03:17
+date modified: 2024-04-09 15:04:89
 tags: [code/big-data]
 ---
 ## 常用命令
@@ -38,21 +38,21 @@ case $1 in
 "start")
 	echo " =================== 启动 hadoop集群 ==================="
 	echo " --------------- 启动 hdfs ---------------"
-	ssh hadoop102 "/opt/module/hadoop-3.1.3/sbin/start-dfs.sh"
+	ssh hadoop1 "/opt/module/hadoop-3.1.3/sbin/start-dfs.sh"
 	echo " --------------- 启动 yarn ---------------"
-	ssh hadoop103 "/opt/module/hadoop-3.1.3/sbin/start-yarn.sh"
+	ssh hadoop2 "/opt/module/hadoop-3.1.3/sbin/start-yarn.sh"
 	echo " --------------- 启动 historyserver ---------------"
-	ssh hadoop102 "/opt/module/hadoop-3.1.3/bin/mapred --daemon start historyserver"
+	ssh hadoop3 "/opt/module/hadoop-3.1.3/bin/mapred --daemon start historyserver"
 ;;
 "stop")
 	echo " =================== 关闭 hadoop集群 ==================="
 	echo " --------------- 关闭 historyserver ---------------"
-	ssh hadoop102 "/opt/module/hadoop-3.1.3/bin/mapred --daemon stop
+	ssh hadoop1 "/opt/module/hadoop-3.1.3/bin/mapred --daemon stop
 	historyserver"
 	echo " --------------- 关闭 yarn ---------------"
-	ssh hadoop103 "/opt/module/hadoop-3.1.3/sbin/stop-yarn.sh"
+	ssh hadoop2 "/opt/module/hadoop-3.1.3/sbin/stop-yarn.sh"
 	echo " --------------- 关闭 hdfs ---------------"
-	ssh hadoop102 "/opt/module/hadoop-3.1.3/sbin/stop-dfs.sh"
+	ssh hadoop3 "/opt/module/hadoop-3.1.3/sbin/stop-dfs.sh"
 ;;
 *)
 	echo "Input Args Error..."

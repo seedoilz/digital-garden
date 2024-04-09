@@ -3,7 +3,7 @@ aliases:
 tags: [code/big-data, code/snippet]
 title: core-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-03-20 11:03:16
+date modified: 2024-04-09 15:04:73
 ---
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -12,7 +12,7 @@ date modified: 2024-03-20 11:03:16
   <!-- 指定NameNode的地址 -->
   <property>
     <name>fs.defaultFS</name>
-  <value>hdfs://hadoop102:8020</value>
+  <value>hdfs://hadoop1:8020</value>
   </property>
   <!-- 指定hadoop数据的存储目录 -->
   <property>
