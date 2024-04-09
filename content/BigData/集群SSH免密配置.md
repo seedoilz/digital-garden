@@ -2,11 +2,12 @@
 aliases: 
 title: 集群SSH免密配置
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-09 15:04:29
+date modified: 2024-04-09 20:04:46
 tags:
   - code/snippet
 ---
-## xsync脚本编写
+## 脚本编写
+### xsync
 >循环复制文件到所有节点的相同目录下
 ```shell
 #!/bin/bash
@@ -37,12 +38,26 @@ do
 		fi
 	done
 done
+
 # 修改脚本 xsync 具有执行权限
 chmod +x xsync
 # 将脚本复制到/bin 中，以便全局调用
 sudo cp xsync /bin/
 ```
+### jpsall
+```shell
+#!/bin/bash
+for host in hadoop1 hadoop2 hadoop3
+	do
+	echo =============== $host ===============
+	ssh $host jps
+done
 
+# 保存后退出，然后赋予脚本执行权限
+chmod +x jpsall
+# 分发/home/atguigu/bin 目录，保证自定义脚本在三台机器上都可以使用
+xsync /home/atguigu/bin/
+```
 ## 免密登陆
 ```shell
 # 在hadoop1上生成公钥和私钥
