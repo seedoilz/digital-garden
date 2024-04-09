@@ -2,7 +2,7 @@
 aliases: 
 title: index
 date created: 2024-03-19 21:03:00
-date modified: 2024-03-31 20:03:71
+date modified: 2024-04-02 11:04:11
 tags: [project, catalogue, input]
 ---
 ## Projects
@@ -16,15 +16,15 @@ tags: [project, catalogue, input]
 - [[CS50/CS50 AI.md|CS50 AI]]
 - [[BigData/Hadoop.md|Hadoop]]
 ## Recently Edited
-| File                         | Last Edited Time    | tags                                              |
-| ---------------------------- | ------------------- | ------------------------------------------------- |
-| [[BigData/Yarn.md]]          | 2024-03-31 20:03:20 | <ul><li>code/big-data</li></ul>                   |
-| [[BigData/Yarn概述.md]]        | 2024-03-31 20:03:16 | <ul><li>code/big-data</li></ul>                   |
-| [[BigData/Hadoop.md]]        | 2024-03-31 20:03:42 | <ul><li>project</li></ul>                         |
-| [[BigData/Hadoop数据压缩.md]]    | 2024-03-31 20:03:75 | <ul><li>code/big-data</li></ul>                   |
-| [[BigData/MapReduce框架原理.md]] | 2024-03-30 22:03:95 | <ul><li>code/big-data</li></ul>                   |
-| [[BigData/MapReduce.md]]     | 2024-03-30 21:03:55 | <ul><li>code/big-data</li><li>input</li></ul>     |
-| [[BigData/大数据学习.md]]         | 2024-03-24 22:03:76 | <ul><li>code/big-data</li><li>catalogue</li></ul> |
-| [[BigData/Hadoop组成.md]]      | 2024-03-23 21:03:90 | <ul><li>code/big-data</li><li>input</li></ul>     |
-| [[BigData/Hadoop序列化.md]]     | 2024-03-22 15:03:28 | <ul><li>code/big-data</li></ul>                   |
-| [[BigData/序列化.md]]           | 2024-03-22 15:03:84 | <ul><li>code</li></ul>                            |
+| File                         | Last Edited Time    | tags                                          |
+| ---------------------------- | ------------------- | --------------------------------------------- |
+| [[BigData/Yarn.md]]          | 2024-04-02 11:04:55 | <ul><li>code/big-data</li><li>input</li></ul> |
+| [[BigData/Yarn实操.md]]        | 2024-04-02 10:04:54 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/Hadoop.md]]        | 2024-04-02 10:04:55 | <ul><li>project</li></ul>                     |
+| [[BigData/Yarn生产环境核心参数.md]]  | 2024-04-02 10:04:23 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/Yarn调度.md]]        | 2024-04-02 10:04:51 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/Yarn常用命令.md]]      | 2024-04-02 10:04:83 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/Yarn概述.md]]        | 2024-04-01 20:04:23 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/未命名.md]]           | \-                  | \-                                            |
+| [[BigData/Hadoop数据压缩.md]]    | 2024-03-31 20:03:75 | <ul><li>code/big-data</li></ul>               |
+| [[BigData/MapReduce框架原理.md]] | 2024-03-30 22:03:95 | <ul><li>code/big-data</li></ul>               |
