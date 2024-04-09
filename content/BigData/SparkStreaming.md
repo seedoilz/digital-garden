@@ -176,8 +176,17 @@ new Thread(
             // Mysql : Table(stopSpark) => Row => data  
             // Redis : Data（K-V）  
             // ZK    : /stopSpark  
-            // HDFS  : /stopSpark            /*            while ( true ) {                if (true) {                    // 获取SparkStreaming状态  
-                    val state: StreamingContextState = ssc.getState()                    if ( state == StreamingContextState.ACTIVE ) {                        ssc.stop(true, true)                    }                }                Thread.sleep(5000)            }             */        }  
+            // HDFS  : /stopSpark            while ( true ) {  
+                if (true) {  
+                    // 获取SparkStreaming状态  
+                    val state: StreamingContextState = ssc.getState()  
+                    if ( state == StreamingContextState.ACTIVE ) {  
+                        ssc.stop(true, true)  
+                    }  
+                }  
+                Thread.sleep(5000)  
+            }  
+        }  
     }  
 ).start()
 ```
