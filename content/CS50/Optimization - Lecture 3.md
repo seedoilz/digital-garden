@@ -1,7 +1,7 @@
 ---
 aliases: 
 date created: 2023-06-21 21:06:00
-date modified: 2024-03-20 11:03:14
+date modified: 2024-04-11 17:04:32
 title: Optimization - Lecture 3
 tags: [input]
 ---
