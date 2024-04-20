@@ -2,7 +2,7 @@
 aliases: 
 title: Spark内核
 date created: 2024-04-11 14:04:00
-date modified: 2024-04-12 09:04:99
+date modified: 2024-04-15 17:04:77
 tags: [code/big-data]
 ---
 ## [[Spark运行机制]]
@@ -116,6 +116,9 @@ DAGScheduler 切割 Job，划分 Stage, 通过调用 submitStage 来提交一个
 在记录 Task 失败次数过程中，会记录它上一次失败所在的 Executor Id 和 Host，这样下次再调度这个 Task 时，会使用黑名单机制，避免它被调度到上一次失败的节点上，起到一定的容错作用。黑名单记录 Task 上一次失败所在的 Executor Id 和 Host，以及其对应的“拉黑”时间，“拉黑”时间是指这段时间内不要再往这个节点上调度这个Task 了。
 
 ## Spark Shuffle解析
+
+^501f97
+
 ### HashShuffle解析
 #### 未优化的HashShuffle
 ![image.png](https://typora-tes.oss-cn-shanghai.aliyuncs.com/picgo/2024-04-12-14-31-28.png)

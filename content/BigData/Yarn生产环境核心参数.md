@@ -2,7 +2,7 @@
 aliases: 
 title: Yarn生产环境核心参数
 date created: 2024-04-02 10:04:00
-date modified: 2024-04-02 10:04:23
+date modified: 2024-04-14 09:04:60
 tags: [code/big-data]
 ---
 

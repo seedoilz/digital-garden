@@ -3,7 +3,7 @@ aliases:
   - Resilient Distributed Dataset
 title: RDD
 date created: 2024-04-03 10:04:00
-date modified: 2024-04-04 22:04:34
+date modified: 2024-04-15 12:04:74
 tags: [code/big-data]
 ---
 ### 概念
