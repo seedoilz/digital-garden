@@ -5,8 +5,8 @@ date created: 2024-03-12 13:03:00
 date modified: 2024-04-20 16:04:46
 tags: [project, code/big-data]
 ---
-[[Hadoop集群搭建]]
-[[Hadoop配置|一些补充内容]]
+[[Hadoop配置]]
+[[Hadoop常用内容|一些补充内容]]
 
 [[Hadoop组成]]
 

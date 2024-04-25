@@ -1,8 +1,8 @@
 ---
 aliases: 
-title: Spark集群搭建
+title: Spark配置
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-22 14:04:51
+date modified: 2024-04-25 20:04:49
 tags:
   - code/big-data
 ---

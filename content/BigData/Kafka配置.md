@@ -1,8 +1,8 @@
 ---
 aliases: 
-title: Kafka集群搭建
+title: Kafka配置
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-24 14:04:39
+date modified: 2024-04-25 20:04:58
 tags:
   - code/big-data
 ---
@@ -10,7 +10,7 @@ tags:
 1. 准备三个虚拟机： `192.168.36.121 hadoop1` `192.168.36.122 hadoop2` `192.168.36.123 hadoop3`
 2. 虚拟机上配置有`ssh`服务，可以进行[[集群SSH免密配置|集群免密登陆]]
 3. `Kafka`运行在`JVM`上，需要安装`JDK`
-4. `kafka`依赖`zookeeper`，需要安装`zookeeper`，可以参考我的另一篇文章[[Zookeeper集群搭建]]
+4. `kafka`依赖`zookeeper`，需要安装`zookeeper`，可以参考我的另一篇文章[[Zookeeper配置]]
 
 > 注意：下边的步骤都是在`hadoop1`这个节点上进行的操作，除特殊说明外。
 

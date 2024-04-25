@@ -1,8 +1,8 @@
 ---
 aliases: 
-title: Zookeeper集群搭建
+title: Zookeeper配置
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-25 20:04:04
+date modified: 2024-04-25 20:04:25
 tags:
   - code/big-data
 ---
