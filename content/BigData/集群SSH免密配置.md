@@ -2,7 +2,7 @@
 aliases: 
 title: 集群SSH免密配置
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-11 19:04:04
+date modified: 2024-04-20 21:04:33
 tags:
   - code/snippet
 ---
@@ -43,6 +43,19 @@ done
 chmod +x xsync
 # 将脚本复制到/bin 中，以便全局调用
 sudo cp xsync /bin/
+```
+### xcall
+```shell
+#! /bin/bash  
+for i in hadoop1 hadoop2 hadoop3
+do 
+	echo --------- $i ----------
+	ssh $i "$*"
+done
+
+# 修改脚本执行权限 
+chmod 777 xcall
+xcall jps
 ```
 ### jpsall
 ```shell

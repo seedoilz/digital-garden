@@ -2,7 +2,7 @@
 aliases: 
 title: Zookeeper集群搭建
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-09 15:04:06
+date modified: 2024-04-25 20:04:04
 tags:
   - code/big-data
 ---
@@ -17,7 +17,6 @@ tags:
 > 注意：下边的步骤都是在`hadoop1`这个节点上进行的操作，除特殊说明外。
 ## 详细步骤
 ### 1、下载安装包
-
 ```shell
 cd /opt/module
 
@@ -25,14 +24,12 @@ wget http://archive.apache.org/dist/zookeeper/stable/apache-zookeeper-3.6.3-bin.
 ```
 
 ### 2、解压
-
 ```shell
 tar -zxvf apache-zookeeper-3.6.3-bin.tar.gz
 mv apache-zookeeper-3.6.3-bin zookeeper
 ```
 
 ### 3、修改配置文件
-
 ```shell
 cd ./zookeeper/conf
 # 添加zookeeper配置文件
@@ -55,7 +52,6 @@ echo "1" > myid
 ```
 
 ### 4、将zookeeper目录分发到其他节点
-
 ```shell
 # 分发到其他集群节点
 scp -r zookeeper/ hadoop2:/opt/module
@@ -63,9 +59,7 @@ scp -r zookeeper/ hadoop3:/opt/module
 ```
 
 ### 5、修改其他节点的myid文件
-
 登录 `hadoop2` 节点：
-
 ```shell
 cd /opt/module/zookeeper/conf/data
 # 指定myid服务号为 2
@@ -73,15 +67,13 @@ vim myid
 ```
 
 登录 `hadoop3` 节点：
-
 ```shell
 cd /opt/module/zookeeper/conf/data
 # 指定myid服务号为 3
 vim myid
 ```
 
-### 6、编写操作[zookeeper集群](https://so.csdn.net/so/search?q=zookeeper%E9%9B%86%E7%BE%A4&spm=1001.2101.3001.7020)的脚本
-
+### 6、编写操作zookeeper集群的脚本
 ```shell
 cd /opt/module/zookeeper/bin
 # 创建zookeeper启动脚本
@@ -118,9 +110,7 @@ esac
 # 保存退出后，修改zk.sh脚本执行权限
 chmod +x ./zk.sh
 ```
-
 脚本的命令说明：
-
 ```shell
 # 启动集群命令
 ./zk.sh start
@@ -131,7 +121,6 @@ chmod +x ./zk.sh
 ```
 
 ### 7、启动集群
-
 ```shell
 # 启动zookeeper集群
 cd /opt/module/zookeeper
@@ -139,7 +128,6 @@ cd /opt/module/zookeeper
 ```
 
 ### 8、连接zookeeper集群
-
 ```shell
 # 连接zookeeper集群 
 cd /opt/module/zookeeper 

@@ -2,7 +2,7 @@
 aliases: 
 title: yarn-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-04-09 15:04:00
+date modified: 2024-04-20 17:04:53
 tags: [code/big-data, code/snippet]
 ---
 ```XML
@@ -45,15 +45,15 @@ RED_HOME</value>
   <property>
     <name>yarn.application.classpath</name>
     <value>
-    /opt/module/hadoop-3.1.3/etc/hadoop,
-    /opt/module/hadoop-3.1.3/share/hadoop/common/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/common/lib/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/hdfs/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/hdfs/lib/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/mapreduce/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/mapreduce/lib/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/yarn/*,
-    /opt/module/hadoop-3.1.3/share/hadoop/yarn/lib/*
+    /opt/module/hadoop/etc/hadoop,
+    /opt/module/hadoop/share/hadoop/common/*,
+    /opt/module/hadoop/share/hadoop/common/lib/*,
+    /opt/module/hadoop/share/hadoop/hdfs/*,
+    /opt/module/hadoop/share/hadoop/hdfs/lib/*,
+    /opt/module/hadoop/share/hadoop/mapreduce/*,
+    /opt/module/hadoop/share/hadoop/mapreduce/lib/*,
+    /opt/module/hadoop/share/hadoop/yarn/*,
+    /opt/module/hadoop/share/hadoop/yarn/lib/*
     </value>
   </property>
 </configuration>

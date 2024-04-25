@@ -2,7 +2,7 @@
 aliases: 
 title: Kafka集群搭建
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-09 15:04:93
+date modified: 2024-04-24 14:04:39
 tags:
   - code/big-data
 ---
@@ -47,8 +47,11 @@ listeners=PLAINTEXT://hadoop1:9092
 log.dirs=/opt/module/kafka/kafka-logs
 zookeeper.connect=hadoop1:2181,hadoop2:2181,hadoop3:2181
 ```
-
-> 参数说明： `broker.id` ： 集群内全局唯一标识，每个节点上需要设置不同的值`listeners`：这个`IP`地址也是与本机相关的，每个节点上设置为自己的`IP`地址`log.dirs` ：存放`kafka`消息的 `zookeeper.connect` ： 配置的是zookeeper集群地址
+> [!Note] 参数说明
+> `broker.id` ： 集群内全局唯一标识，**每个节点上需要设置不同的值**
+> `listeners`：这个`IP`地址也是与本机相关的，每个节点上设置为自己的`IP`地址
+> `log.dirs` ：存放`kafka`消息的 
+> `zookeeper.connect` ： 配置的是zookeeper集群地址
 
 ## 5、分发kafka安装目录
 
@@ -65,13 +68,6 @@ scp -r /opt/module/kafka/ hadoop3:/opt/module
 ## 6、编写kafka集群操作脚本
 
 ```shell
-# 导入java环境
-vim /etc/profile
-# 添加如下内容(注意：填写自己的java安装目录)
-export JAVA_HOME=/usr/java/jdk1.8.0_131
-export CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
-export PATH=$PATH:$JAVA_HOME/bin
-
 cd /opt/module/kafka/bin
 # 创建kafka启动脚本
 vim kafka-cluster.sh

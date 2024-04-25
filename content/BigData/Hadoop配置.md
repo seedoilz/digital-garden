@@ -2,65 +2,9 @@
 aliases: 
 title: Hadoop配置
 date created: 2024-03-17 19:03:00
-date modified: 2024-04-09 15:04:89
+date modified: 2024-04-20 21:04:03
 tags: [code/big-data]
 ---
-## 常用命令
-### 各个模块分开启动/停止（配置ssh 是前提）
-#### 整体启动/停止HDFS
-```shell
-start-dfs.sh/stop-dfs.sh
-```
-
-#### 整体启动/停止YARN
-```shell
-start-yarn.sh/stop-yarn.sh
-```
-### 各个服务组件逐一启动/停止
-#### 分别启动/停止HDFS 组件
-```shell
-hdfs --daemon start/stop namenode/datanode/secondarynamenode
-```
-#### 启动/停止YARN
-```shell
-yarn --daemon start/stop resourcemanager/nodemanager
-```
-### Hadoop集群启停脚本
-```shell
-#!/bin/bash
-if [ $# -lt 1 ]
-then
-	echo "No Args Input..."
-	exit ;
-fi
-
-case $1 in
-"start")
-	echo " =================== 启动 hadoop集群 ==================="
-	echo " --------------- 启动 hdfs ---------------"
-	ssh hadoop1 "/opt/module/hadoop-3.1.3/sbin/start-dfs.sh"
-	echo " --------------- 启动 yarn ---------------"
-	ssh hadoop2 "/opt/module/hadoop-3.1.3/sbin/start-yarn.sh"
-	echo " --------------- 启动 historyserver ---------------"
-	ssh hadoop3 "/opt/module/hadoop-3.1.3/bin/mapred --daemon start historyserver"
-;;
-"stop")
-	echo " =================== 关闭 hadoop集群 ==================="
-	echo " --------------- 关闭 historyserver ---------------"
-	ssh hadoop1 "/opt/module/hadoop-3.1.3/bin/mapred --daemon stop
-	historyserver"
-	echo " --------------- 关闭 yarn ---------------"
-	ssh hadoop2 "/opt/module/hadoop-3.1.3/sbin/stop-yarn.sh"
-	echo " --------------- 关闭 hdfs ---------------"
-	ssh hadoop3 "/opt/module/hadoop-3.1.3/sbin/stop-dfs.sh"
-;;
-*)
-	echo "Input Args Error..."
-;;
-esac
-```
-
-
 ### 常用端口号
 ![CleanShot 2024-03-18 at 10.45.12@2x.png](https://typora-tes.oss-cn-shanghai.aliyuncs.com/picgo/CleanShot%202024-03-18%20at%2010.45.12%402x.png)
 

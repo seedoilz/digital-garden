@@ -3,7 +3,7 @@ aliases:
 tags: [code/big-data, code/snippet]
 title: core-site.xml
 date created: 2024-03-17 19:03:00
-date modified: 2024-04-09 15:04:73
+date modified: 2024-04-20 17:04:78
 ---
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -17,7 +17,7 @@ date modified: 2024-04-09 15:04:73
   <!-- 指定hadoop数据的存储目录 -->
   <property>
     <name>hadoop.tmp.dir</name>
-  <value>/opt/module/hadoop-3.1.3/data</value>
+  <value>/opt/module/hadoop/data</value>
   </property>
   <!-- 配置HDFS网页登录使用的静态用户为atguigu -->
   <property>

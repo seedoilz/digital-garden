@@ -2,7 +2,7 @@
 aliases: 
 title: Hadoop集群搭建
 date created: 2024-04-09 14:04:00
-date modified: 2024-04-09 15:04:92
+date modified: 2024-04-25 20:04:41
 tags: [code/big-data]
 ---
 前期准备：
@@ -175,6 +175,16 @@ hadoop3
 </configuration>
 ```
 
+#### 4.7 修改my_envs.sh
+```shell
+export HADOOP_USER_NAME=root
+export HDFS_NAMENODE_USER=root
+export HDFS_DATANODE_USER=root
+export HDFS_SECONDARYNAMENODE_USER=root
+export YARN_RESOURCEMANAGER_USER=root
+export YARN_NODEMANAGER_USER=root
+```
+
 ### 5、把`/opt/module/hadoop`复制到其他节点上
 
 ```shell
@@ -230,4 +240,59 @@ mr-jobhistory-daemon.sh start historyserver
 stop-yarn.sh
 stop-dfs.sh
 mr-jobhistory-daemon.sh stop historyserver
+```
+
+## 常用命令
+### 各个模块分开启动/停止（配置ssh 是前提）
+#### 整体启动/停止HDFS
+```shell
+start-dfs.sh/stop-dfs.sh
+```
+
+#### 整体启动/停止YARN
+```shell
+start-yarn.sh/stop-yarn.sh
+```
+### 各个服务组件逐一启动/停止
+#### 分别启动/停止HDFS 组件
+```shell
+hdfs --daemon start/stop namenode/datanode/secondarynamenode
+```
+#### 启动/停止YARN
+```shell
+yarn --daemon start/stop resourcemanager/nodemanager
+```
+### Hadoop集群启停脚本
+```shell
+#!/bin/bash
+if [ $# -lt 1 ]
+then
+	echo "No Args Input..."
+	exit ;
+fi
+
+case $1 in
+"start")
+	echo " =================== 启动 hadoop集群 ==================="
+	echo " --------------- 启动 hdfs ---------------"
+	ssh hadoop1 "/opt/module/hadoop/sbin/start-dfs.sh"
+	echo " --------------- 启动 yarn ---------------"
+	ssh hadoop2 "/opt/module/hadoop/sbin/start-yarn.sh"
+	echo " --------------- 启动 historyserver ---------------"
+	ssh hadoop3 "/opt/module/hadoop/bin/mapred --daemon start historyserver"
+;;
+"stop")
+	echo " =================== 关闭 hadoop集群 ==================="
+	echo " --------------- 关闭 historyserver ---------------"
+	ssh hadoop1 "/opt/module/hadoop/bin/mapred --daemon stop
+	historyserver"
+	echo " --------------- 关闭 yarn ---------------"
+	ssh hadoop2 "/opt/module/hadoop/sbin/stop-yarn.sh"
+	echo " --------------- 关闭 hdfs ---------------"
+	ssh hadoop3 "/opt/module/hadoop/sbin/stop-dfs.sh"
+;;
+*)
+	echo "Input Args Error..."
+;;
+esac
 ```
