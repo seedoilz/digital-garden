@@ -2,7 +2,7 @@
 aliases: 
 title: Flink算子
 date created: 2024-04-23 14:04:00
-date modified: 2024-04-23 16:04:35
+date modified: 2024-04-27 18:04:93
 tags: [code/big-data]
 ---
 Flink 和 Spark 类似，也是一种一站式处理的框架;既可以进行批处理(DataSet)， 也可以进行实时处理(DataStream)。  

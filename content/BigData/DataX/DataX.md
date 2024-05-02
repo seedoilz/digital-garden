@@ -2,7 +2,7 @@
 aliases: 
 title: DataX
 date created: 2024-04-25 20:04:00
-date modified: 2024-04-25 21:04:55
+date modified: 2024-04-27 18:04:52
 tags: [code/big-data, project]
 ---
 >DataX 是阿里巴巴开源的一个异构数据源离线同步工具，致力于实现包括关系型数据库 (MySQL、Oracle 等)、HDFS、Hive、ODPS、HBase、FTP 等各种异构数据源之间稳定高效的数据同步功能。

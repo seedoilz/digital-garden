@@ -2,14 +2,14 @@
 aliases: 
 title: Flink运行架构
 date created: 2024-04-15 17:04:00
-date modified: 2024-04-23 16:04:46
+date modified: 2024-05-01 21:05:40
 tags: [code/big-data]
 ---
 ## Flink 程序结构
 ![image.png](https://typora-tes.oss-cn-shanghai.aliyuncs.com/picgo/2024-04-15-17-06-08.png)
 ### 结构
 #### Source
-数据源，Flink 在流处理和批处理上的 source 大概有 4 类: 基于本地集合的 source、基于文件的 source、基于网络套接字的 source、自定义的 source
+数据源，Flink 在流处理和批处理上的 source 大概有 4 类: 基于本地集合的 source、基于文件的 source、基于网络套接字的  、自定义的 source
 
 #### Transformation
 数据转换的各种操作，有 Map / FlatMap / Filter / KeyBy / Reduce / Fold / Aggregations / Window /WindowAll / Union / Window join / Split / Select 等，操作很多，可以将数据转换计算成你想要的数据。
