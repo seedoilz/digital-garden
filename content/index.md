@@ -2,11 +2,11 @@
 aliases: 
 title: index
 date created: 2024-03-19 21:03:00
-date modified: 2024-05-03 10:05:58
+date modified: 2024-07-28 12:07:12
 tags: 
 ---
 ## Projects
-- [[大数据学习/HBase/HBase.md|HBase]]
+- [[HBase|HBase]]
 - [[BigData/Flink/Flink.md|Flink]]
 - [[BigData/数据仓库/数据仓库.md|数据仓库]]
 - [[BigData/DataX/DataX.md|DataX]]
@@ -27,8 +27,8 @@ tags:
 ## Recently Edited
 | File                         | Last Edited Time    | tags                                                  |
 | ---------------------------- | ------------------- | ----------------------------------------------------- |
-| [[大数据学习/HBase/HBase配置.md]]   | 2024-05-03 09:05:23 | <ul><li>code/big-data</li></ul>                       |
-| [[大数据学习/HBase/HBase.md]]     | 2024-05-03 09:05:67 | <ul><li>project</li><li>code/big-data</li></ul>       |
+| [[HBase配置]]   | 2024-05-03 09:05:23 | <ul><li>code/big-data</li></ul>                       |
+| [[HBase]]     | 2024-05-03 09:05:67 | <ul><li>project</li><li>code/big-data</li></ul>       |
 | [[BigData/Flink/Flink配置.md]] | 2024-05-02 21:05:40 | <ul><li>code/big-data</li></ul>                       |
 | [[BigData/Kafka/Kafka配置.md]] | 2024-05-02 21:05:29 | <ul><li>code/big-data</li></ul>                       |
 | [[BigData/Flink/未命名.md]]     | 2024-05-02 21:05:34 | \-                                                    |

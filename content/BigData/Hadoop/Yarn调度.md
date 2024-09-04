@@ -2,7 +2,7 @@
 aliases: 
 title: Yarn调度
 date created: 2024-04-01 20:04:00
-date modified: 2024-04-02 10:04:51
+date modified: 2024-05-05 11:05:63
 tags: [code/big-data]
 ---
 >Hadoop 作业调度器主要有三种：FIFO、容量（Capacity Scheduler）和公平（Fair Scheduler）。Apache Hadoop3.1.3 默认的资源调度器是 Capacity Scheduler。

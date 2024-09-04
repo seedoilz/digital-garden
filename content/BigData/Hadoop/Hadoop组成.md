@@ -2,10 +2,10 @@
 aliases: 
 title: Hadoop组成
 date created: 2024-03-12 13:03:00
-date modified: 2024-03-23 21:03:90
+date modified: 2024-05-15 12:05:36
 tags: [code/big-data, input]
 ---
-## 组成
+ ## 组成
 ### Hadoop1.x
 1. [[MapReduce]] *（计算+资源调度）*
 2. [[HDFS]]（数据存储）
